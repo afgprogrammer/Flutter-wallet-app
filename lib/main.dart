@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:day40/pages/contact.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -178,7 +179,7 @@ class _HomePageState extends State<HomePage> {
             delegate: SliverChildListDelegate([
               SizedBox(height: 20,),
               Container(
-                padding: EdgeInsets.only(left: 20, top: 20),
+                padding: EdgeInsets.only(top: 20),
                 height: 115,
                 width: double.infinity,
                 child: ListView.builder(
@@ -189,7 +190,12 @@ class _HomePageState extends State<HomePage> {
                       duration: Duration(milliseconds: (index + 1) * 100),
                       child: AspectRatio(
                         aspectRatio: 1,
-                        child: Container(
+                        child: GestureDetector(
+                          onTap: () {
+                            if (_services[index][0] == 'Transfer') { 
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => ContactPage()));
+                            }
+                          },
                           child: Column(
                             children: [
                               Container(
