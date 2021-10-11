@@ -32,7 +32,7 @@ flutter run
 <img src="assets/screenshot/home-page.png" />
 
 ### Contact Page
-<img src="assets/screenshot/contact-page.png" />
+<img src="assets/screenshot/contact-page-2.png" />
 
 ### Send Money Page
 <img src="assets/screenshot/send-money-page.png" />
