@@ -37,6 +37,7 @@ dependencies:
   iconsax: ^0.0.8
   animate_do: ^2.0.0
   pattern_formatter: ^2.0.0
+  align_positioned: ^3.0.0
 
 dev_dependencies:
   flutter_test:
