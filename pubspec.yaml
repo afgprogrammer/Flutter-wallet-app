@@ -39,6 +39,7 @@ dependencies:
   pattern_formatter: ^2.0.0
   align_positioned: ^3.0.0
   flutter_advanced_drawer: ^1.2.3+1
+  bouncing_widget: ^2.0.0
 
 dev_dependencies:
   flutter_test:
