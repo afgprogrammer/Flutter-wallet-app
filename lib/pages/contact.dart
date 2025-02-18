@@ -41,9 +41,11 @@ class _ContactPageState extends State<ContactPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         elevation: 0,
+        scrolledUnderElevation: 0,
         title: Text('Contacts', style: TextStyle(color: Colors.black),),
         leading: BackButton(color: Colors.black,),
         bottom: PreferredSize(
