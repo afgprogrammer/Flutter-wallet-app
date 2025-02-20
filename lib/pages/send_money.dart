@@ -45,6 +45,7 @@ class _SendMoneyState extends State<SendMoney> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -60,7 +61,7 @@ class _SendMoneyState extends State<SendMoney> {
               SizedBox(height: 50,),
               FadeInDown(
                 from: 100,
-                duration: Duration(milliseconds: 1000),
+                duration: Duration(milliseconds: 500),
                 child: Container(
                   width: 130,
                   height: 130,
@@ -78,19 +79,19 @@ class _SendMoneyState extends State<SendMoney> {
               FadeInUp(
                 from: 60,
                 delay: Duration(milliseconds: 500),
-                duration: Duration(milliseconds: 1000),
+                duration: Duration(milliseconds: 500),
                 child: Text("Send Money To", style: TextStyle(color: Colors.grey),)),
               SizedBox(height: 10,),
               FadeInUp(
                 from: 30,
                 delay: Duration(milliseconds: 800),
-                duration: Duration(milliseconds: 1000),
+                duration: Duration(milliseconds: 500),
                 child: Text(widget.name, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),)),
               SizedBox(height: 20,),
               FadeInUp(
                 from: 40,
                 delay: Duration(milliseconds: 800),
-                duration: Duration(milliseconds: 1000),
+                duration: Duration(milliseconds: 500),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 50.0),
                   child: TextField(
@@ -136,7 +137,7 @@ class _SendMoneyState extends State<SendMoney> {
               FadeInUp(
                 from: 60,
                 delay: Duration(milliseconds: 800),
-                duration: Duration(milliseconds: 1000),
+                duration: Duration(milliseconds: 500),
                 child: AnimatedContainer(
                   margin: EdgeInsets.symmetric(horizontal: 30),
                   duration: Duration(milliseconds: 500),
@@ -166,7 +167,7 @@ class _SendMoneyState extends State<SendMoney> {
               FadeInUp(
                 from: 60,
                 delay: Duration(milliseconds: 800),
-                duration: Duration(milliseconds: 1000),
+                duration: Duration(milliseconds: 500),
                 child: Container(
                   height: 50,
                   padding: EdgeInsets.symmetric(horizontal: 30),
@@ -177,7 +178,7 @@ class _SendMoneyState extends State<SendMoney> {
                       return FadeInRight(
                         from: 100,
                         delay: Duration(milliseconds: index * 500),
-                        duration: Duration(milliseconds: 1000),
+                        duration: Duration(milliseconds: 500),
                         child: BouncingWidget(
                           duration: Duration(milliseconds: 100),
                           scaleFactor: 1.5,
@@ -206,7 +207,7 @@ class _SendMoneyState extends State<SendMoney> {
               ),
               SizedBox(height: 50,),
               FadeInUp(
-                duration: Duration(milliseconds: 1000),
+                duration: Duration(milliseconds: 500),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 50.0),
                   child: Material(
