@@ -17,7 +17,7 @@ class _ContactPageState extends State<ContactPage> {
       'avatar': 'assets/images/avatar-1.png',
     },
     {
-      'name': 'Samantha',
+      'name': 'Phr 🦋',
       'avatar': 'assets/images/avatar-2.png',
     },
     {
@@ -131,7 +131,7 @@ class _ContactPageState extends State<ContactPage> {
               ),
             ),
             Container(
-              height: 90,
+              height: 95,
               padding: EdgeInsets.only(left: 20),
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
