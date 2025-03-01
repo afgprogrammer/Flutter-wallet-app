@@ -44,12 +44,15 @@ class _SendMoneyState extends State<SendMoney> {
   
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        scrolledUnderElevation: 0,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Text('Send Money', style: TextStyle(color: Colors.black),),
+        title: Text('Send Money', style: theme.textTheme.titleMedium?.copyWith(fontSize: 18),),
         leading: BackButton(color: Colors.black,),
       ),
       body: SingleChildScrollView(
@@ -58,7 +61,7 @@ class _SendMoneyState extends State<SendMoney> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 50,),
+              SizedBox(height: 32,),
               FadeInDown(
                 from: 100,
                 duration: Duration(milliseconds: 500),
@@ -75,19 +78,19 @@ class _SendMoneyState extends State<SendMoney> {
                     child: Image.asset(widget.avatar)),
                 ),
               ),
-              SizedBox(height: 50,),
+              SizedBox(height: 32,),
               FadeInUp(
                 from: 60,
                 delay: Duration(milliseconds: 500),
                 duration: Duration(milliseconds: 500),
-                child: Text("Send Money To", style: TextStyle(color: Colors.grey),)),
-              SizedBox(height: 10,),
+                child: Text("Send Money To", style: theme.textTheme.titleSmall,)),
+              SizedBox(height: 8,),
               FadeInUp(
                 from: 30,
                 delay: Duration(milliseconds: 800),
                 duration: Duration(milliseconds: 500),
-                child: Text(widget.name, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),)),
-              SizedBox(height: 20,),
+                child: Text(widget.name, style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800),)),
+
               FadeInUp(
                 from: 40,
                 delay: Duration(milliseconds: 800),
@@ -132,14 +135,14 @@ class _SendMoneyState extends State<SendMoney> {
                   ),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(height: 16,),
               // note textfield
               FadeInUp(
                 from: 60,
-                delay: Duration(milliseconds: 800),
+                delay: Duration(milliseconds: 200),
                 duration: Duration(milliseconds: 500),
                 child: AnimatedContainer(
-                  margin: EdgeInsets.symmetric(horizontal: 30),
+                  margin: EdgeInsets.symmetric(horizontal: 16),
                   duration: Duration(milliseconds: 500),
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -163,14 +166,14 @@ class _SendMoneyState extends State<SendMoney> {
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 16,),
               FadeInUp(
                 from: 60,
                 delay: Duration(milliseconds: 800),
                 duration: Duration(milliseconds: 500),
                 child: Container(
                   height: 50,
-                  padding: EdgeInsets.symmetric(horizontal: 30),
+                  padding: EdgeInsets.symmetric(horizontal: 16),
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
                     itemCount: _feedbacks.length,
@@ -187,17 +190,14 @@ class _SendMoneyState extends State<SendMoney> {
                             _focusNode.requestFocus();
                           },
                           child: Container(
-                            margin: EdgeInsets.only(right: 20),
+                            margin: EdgeInsets.only(right: 8),
                             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: Colors.grey.shade200, width: 2),
+                              border: Border.all(color: Colors.grey.shade300, width: 1),
                             ),
-                            child: Text(_feedbacks[index], style: TextStyle(
-                              color: Colors.grey.shade800,
-                              fontSize: 16
-                            ),),
+                            child: Text(_feedbacks[index], style: theme.textTheme.titleMedium,),
                           ),
                         ),
                       );
@@ -205,13 +205,13 @@ class _SendMoneyState extends State<SendMoney> {
                   ),
                 ),
               ),
-              SizedBox(height: 50,),
+              SizedBox(height: 32,),
               FadeInUp(
                 duration: Duration(milliseconds: 500),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Material(
-                    elevation: 5,
+                    elevation: 0,
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.black,
                     child: MaterialButton(
@@ -225,6 +225,7 @@ class _SendMoneyState extends State<SendMoney> {
                   ),
                 ),
               ),
+              SizedBox(height: 32,),
             ],
           ),
         ),
